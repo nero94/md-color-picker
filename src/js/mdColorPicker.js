@@ -518,7 +518,7 @@ angular.module('mdColorPicker', [])
 
 				// Watch for updates to value and set them on the model
 				$scope.$watch('value',function(newVal,oldVal) {
-					if (newVal !== '' && typeof newVal !== 'undefined' && newVal && newVal !== oldVal) {
+					if (newVal !== oldVal) {
 						ngModel.$setViewValue(newVal);
 					}
 				});
