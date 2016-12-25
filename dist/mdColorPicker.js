@@ -722,7 +722,7 @@ angular.module('mdColorPicker', [])
 				};
 
 				$scope.changeValue = function changeValue() {
-					$scope.color = tinycolor( $scope.value );
+					$scope.color = $scope.mdColorAlphaChannel ? tinycolor( $scope.value ) : tinycolor( tinycolor($scope.value).toHexString() );
 					$scope.$broadcast('mdColorPicker:colorSet', { color: $scope.color });
 				};
 
