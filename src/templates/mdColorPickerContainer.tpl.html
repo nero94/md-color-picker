@@ -47,7 +47,7 @@
 							<md-slider flex="65" min="0" max="255" ng-model="color._r" aria-label="red" class="red-slider"></md-slider>
 							<span flex></span>
 							<div flex="20" layout layout-align="center center">
-								<input style="width: 100%;" min="0" max="255" type="number" ng-model="color._r" aria-label="red" aria-controls="red-slider">
+								<input style="width: 100%;" min="0" max="255" type="number" ng-value="25" ng-model="color._r" aria-label="red" aria-controls="red-slider">
 							</div>
 						</div>
 						<div layout="row" layout-align="start center" layout-wrap flex layout-fill>
@@ -57,7 +57,7 @@
 							<md-slider flex="65" min="0" max="255" ng-model="color._g" aria-label="green" class="green-slider"></md-slider>
 							<span flex></span>
 							<div flex="20" layout layout-align="center center">
-								<input style="width: 100%;" min="0" max="255" type="number" ng-model="color._g" aria-label="green" aria-controls="green-slider">
+								<input style="width: 100%;" min="0" max="255" type="number" ng-change="validate('_g')" ng-model="color._g" aria-label="green" aria-controls="green-slider">
 							</div>
 						</div>
 						<div layout="row" layout-align="start center" layout-wrap flex layout-fill>
@@ -67,7 +67,7 @@
 							<md-slider flex="65" min="0" max="255" ng-model="color._b" aria-label="blue" class="blue-slider"></md-slider>
 							<span flex></span>
 							<div flex="20" layout layout-align="center center" >
-								<input style="width: 100%;" min="0" max="255" type="number" ng-model="color._b" aria-label="blue" aria-controls="blue-slider">
+								<input style="width: 100%;" min="0" max="255" type="number" ng-change="validate('_b')" ng-model="color._b" aria-label="blue" aria-controls="blue-slider">
 							</div>
 						</div>
 						<div layout="row" layout-align="start center" layout-wrap flex layout-fill ng-if="mdColorAlphaChannel">

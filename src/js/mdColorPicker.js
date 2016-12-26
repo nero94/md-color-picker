@@ -719,6 +719,14 @@ angular.module('mdColorPicker', [])
 					$scope.$broadcast('mdColorPicker:colorSet', { color: $scope.color });
 				};
 
+                $scope.validate = function (value) {
+                    if (!$scope.color[value] && typeof $scope.color[value] === 'undefined') {
+                        $scope.color[value] = 255;
+                    } else if ($scope.color[value] === null) {
+                        $scope.color[value] = 0;
+					}
+                };
+
 
 				///////////////////////////////////
 				// Watches and Events
